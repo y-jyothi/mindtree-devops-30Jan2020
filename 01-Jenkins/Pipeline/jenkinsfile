@@ -1,6 +1,6 @@
 node {
  try  {
- notify('Job Started') 
+
 
      
   stage('Git-Checkout') {
@@ -71,9 +71,9 @@ dir(project_terra) {
    }
 }
 
-notify('Job Completed')   
+ 
 } catch (err) {
-  notify("Error ${err}")
+ 
   currentBuild.result = 'FAILURE'
 }
 }
